@@ -1,0 +1,4 @@
+package factorias
+
+object FactoriaPersonas {
+}
