@@ -1,3 +1,5 @@
 package modelos
 
-data class Combate(var numCazas:Int,var idMision:Int)
+class Combate(idMision: Int, nombre: String, matricula: String, var numCazas:Int):Mision(idMision, nombre, matricula){
+
+}

@@ -1,5 +1,7 @@
 package modelos
 
-class Piloto(nombre: String, edad: Int, contraseña: String, experiencia: Int) : Persona(nombre, edad, contraseña) {
+import android.graphics.Bitmap
+
+class Piloto(nombre: String, edad: Int, contraseña: String, experiencia: Int, foto:Bitmap) : Persona(nombre, edad, contraseña) {
 
 }
