@@ -6,6 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".VaderActivity">
 
+    <Button
+        android:id="@+id/btRankingPilotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ranking de pilotos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
+
+    <Button
+        android:id="@+id/btAsignarMision"
+        android:layout_width="196dp"
+        android:layout_height="50dp"
+        android:text="Asignar misiones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <Button
+        android:id="@+id/btAltaNave"
+        android:layout_width="182dp"
+        android:layout_height="52dp"
+        android:text="Añadir Nave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525" />
+
+    <Button
+        android:id="@+id/btAltaMision"
+        android:layout_width="196dp"
+        android:layout_height="46dp"
+        android:text="Añadir Mision"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.647" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -17,5 +65,18 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.172" />
+
+    <Button
+        android:id="@+id/btAltaPiloto"
+        android:layout_width="182dp"
+        android:layout_height="50dp"
+        android:text="Añadir Piloto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

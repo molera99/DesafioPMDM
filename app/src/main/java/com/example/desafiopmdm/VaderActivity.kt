@@ -1,5 +1,6 @@
 package com.example.desafiopmdm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.desafiopmdm.databinding.ActivityMainBinding
@@ -11,5 +12,10 @@ class VaderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityVaderBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btAltaPiloto.setOnClickListener{
+            var intentAñadirPiloto = Intent(this,AddpilotoActivity::class.java)
+            startActivity(intentAñadirPiloto)
+        }
     }
 }

@@ -26,6 +26,20 @@ object Conexion {
         bd.insert("persona", null, registro)
         bd.close()
     }
+    fun addPiloto(contexto: AppCompatActivity, p: Piloto){
+        val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
+        val bd = admin.writableDatabase
+        val registro = ContentValues()
+        registro.put("nombre", p.nombre)
+        registro.put("dis", "User")
+        registro.put("edad",p.edad)
+        registro.put("contraseña", p.contraseña)
+        registro.put("experiencia",p.experiencia)
+        registro.put("foto",p.foto)
+        bd.insert("persona", null, registro)
+        bd.close()
+    }
+
     fun obtenerPersonas(contexto: AppCompatActivity){
         val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
         val bd = admin.writableDatabase
@@ -37,10 +51,10 @@ object Conexion {
             }
         }
 
-        fila = bd.rawQuery("select dis from persona where dis not like \"Admin\"", null)
+        fila = bd.rawQuery("select nombre,edad,contraseña,experiencia,foto from persona where dis not like \"Admin\"", null)
         if(fila.count>0) {
             while (fila.moveToNext()) {
-                var p: Persona = Piloto(fila.getString(0), fila.getInt(1), fila.getString(2), fila.getInt(3), fila.getBlob(4))
+                var p: Persona = Piloto(fila.getString(0), fila.getInt(1), fila.getString(2), fila.getInt(3), fila.getString(4))
                 Listas.listaPersona.add(p)
             }
         }

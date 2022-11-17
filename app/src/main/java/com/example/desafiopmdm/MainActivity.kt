@@ -7,6 +7,8 @@ import android.widget.Toast
 import auxiliar.Conexion
 import com.example.desafiopmdm.databinding.ActivityMainBinding
 import factorias.FactoriaPersonas
+import modelos.Listas
+import modelos.Piloto
 import modelos.Vader
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +31,15 @@ class MainActivity : AppCompatActivity() {
                     var intentVader = Intent(this,VaderActivity::class.java)
                     startActivity(intentVader)
                 }else if(comprobarCredenciales && binding.etUsuario.text.toString()!="Vader"){
-
+                    var piloto: Piloto? =null
+                    for(i in Listas.listaPersona.indices){
+                        if(Listas.listaPersona[i].nombre==binding.etUsuario.text.toString()){
+                            piloto= Listas.listaPersona[i] as Piloto
+                        }
+                    }
+                    var intentPiloto = Intent(this,PilotoActivity::class.java)
+                    intentPiloto.putExtra("piloto",piloto)
+                    startActivity(intentPiloto)
                 } else{
                     Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
                 }
