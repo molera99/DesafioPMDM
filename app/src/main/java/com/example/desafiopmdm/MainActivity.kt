@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             Conexion.addVader(this,vader)
         }
         Conexion.obtenerPersonas(this)
+        Conexion.obtenerNaves(this)
 
         binding.btIniciar.setOnClickListener{
                 var comprobarCredenciales=Conexion.comprobarCredenciales(this,binding.etUsuario.text.toString(),binding.etPassword.text.toString())

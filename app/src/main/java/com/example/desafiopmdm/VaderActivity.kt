@@ -17,5 +17,9 @@ class VaderActivity : AppCompatActivity() {
             var intentAñadirPiloto = Intent(this,AddpilotoActivity::class.java)
             startActivity(intentAñadirPiloto)
         }
+        binding.btAltaNave.setOnClickListener{
+            var intentAñadirNave = Intent(this,NaveActivity::class.java)
+            startActivity(intentAñadirNave)
+        }
     }
 }
