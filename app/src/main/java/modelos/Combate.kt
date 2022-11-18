@@ -1,5 +1,5 @@
 package modelos
 
-class Combate(idMision: Int, nombre: String, matricula: String,var numCazas:Int):Mision(idMision, nombre, matricula){
+class Combate(idMision: Int,tipo:String, nombre: String?, matricula: String?,resultado: String?,var numCazas:Int):Mision(idMision,tipo, nombre, matricula,resultado){
 
 }

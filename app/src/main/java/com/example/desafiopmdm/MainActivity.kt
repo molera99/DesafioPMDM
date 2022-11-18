@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import auxiliar.Conexion
+import auxiliar.ContadorId
 import com.example.desafiopmdm.databinding.ActivityMainBinding
 import factorias.FactoriaPersonas
 import modelos.Listas
 import modelos.Piloto
 import modelos.Vader
+import modelos.Vuelo
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -25,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         }
         Conexion.obtenerPersonas(this)
         Conexion.obtenerNaves(this)
-
+        Conexion.obtenerMisiones(this)
+        ContadorId.idMision=Conexion.obtenerIdMision(this)
         binding.btIniciar.setOnClickListener{
                 var comprobarCredenciales=Conexion.comprobarCredenciales(this,binding.etUsuario.text.toString(),binding.etPassword.text.toString())
                 if(comprobarCredenciales && binding.etUsuario.text.toString()=="Vader"){

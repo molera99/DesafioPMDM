@@ -21,5 +21,13 @@ class VaderActivity : AppCompatActivity() {
             var intentAñadirNave = Intent(this,NaveActivity::class.java)
             startActivity(intentAñadirNave)
         }
+        binding.btAAdirMision.setOnClickListener{
+            var intentAñadirMision = Intent(this,MisionesActivity::class.java)
+            startActivity(intentAñadirMision)
+        }
+        binding.btAsignarMision.setOnClickListener{
+            var intentAsignarMision = Intent(this,AsignarMisionActivity::class.java)
+            startActivity(intentAsignarMision)
+        }
     }
 }

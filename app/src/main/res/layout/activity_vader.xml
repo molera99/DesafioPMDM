@@ -7,28 +7,40 @@
     tools:context=".VaderActivity">
 
     <Button
+        android:id="@+id/btAsignarMision"
+        android:layout_width="196dp"
+        android:layout_height="50dp"
+        android:text="Asignar Mision"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
+
+    <Button
         android:id="@+id/btRankingPilotos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ranking de pilotos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <Button
-        android:id="@+id/btAsignarMision"
+        android:id="@+id/btAñadirMision"
         android:layout_width="196dp"
         android:layout_height="50dp"
-        android:text="Asignar misiones"
+        android:text="Añadir Mision"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/btAltaNave"
