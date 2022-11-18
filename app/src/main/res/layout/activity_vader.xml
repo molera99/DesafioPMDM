@@ -7,16 +7,16 @@
     tools:context=".VaderActivity">
 
     <Button
-        android:id="@+id/btAsignarMision"
-        android:layout_width="196dp"
-        android:layout_height="50dp"
-        android:text="Asignar Mision"
+        android:id="@+id/btCerrar"
+        android:layout_width="179dp"
+        android:layout_height="46dp"
+        android:text="Cerrar Sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <Button
         android:id="@+id/btRankingPilotos"
@@ -25,10 +25,22 @@
         android:text="Ranking de pilotos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.819" />
+
+    <Button
+        android:id="@+id/btAsignarMision"
+        android:layout_width="196dp"
+        android:layout_height="50dp"
+        android:text="Asignar Mision"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
 
     <Button
         android:id="@+id/btAñadirMision"
@@ -37,15 +49,15 @@
         android:text="Añadir Mision"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/btAltaNave"
-        android:layout_width="182dp"
-        android:layout_height="52dp"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
         android:text="Añadir Nave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +81,8 @@
 
     <Button
         android:id="@+id/btAltaPiloto"
-        android:layout_width="182dp"
-        android:layout_height="50dp"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
         android:text="Añadir Piloto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

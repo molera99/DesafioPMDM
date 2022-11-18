@@ -90,22 +90,32 @@ class AddpilotoActivity : AppCompatActivity() {
 
 
         binding.btAAdirPiloto.setOnClickListener{
-            var nombre=binding.etNombre.text.toString()
-            var edad=binding.etEdad.text.toString().toInt()
-            var contraseña=binding.etContraseA.text.toString()
-            var experiencia= binding.sbExperiencia.progress
-            var foto=""
-            if (binding.swFoto.isChecked){
-                foto="Defecto"
-            }else{
-                foto=getExternalFilesDir(null).toString() + "/"+binding.etNombre.text.toString()
-            }
-            var piloto=factorias.FactoriaPersonas.crearPiloto(nombre,edad,contraseña,experiencia,foto)
-            Listas.listaPersona.add(piloto)
-            Conexion.addPiloto(this,piloto)
-            Toast.makeText(this, "Piloto $nombre añadido con exito", Toast.LENGTH_SHORT).show()
-            var intentVader = Intent(this,VaderActivity::class.java)
-            startActivity(intentVader)
+
+                var nombre = binding.etNombre.text.toString()
+                var edad = binding.etEdad.text.toString().toInt()
+                var contraseña = binding.etContraseA.text.toString()
+                var experiencia = binding.sbExperiencia.progress
+                var foto = ""
+                if (binding.swFoto.isChecked) {
+                    foto = "Defecto"
+                } else {
+                    foto =
+                        getExternalFilesDir(null).toString() + "/" + binding.etNombre.text.toString()
+                }
+                var piloto = factorias.FactoriaPersonas.crearPiloto(
+                    nombre,
+                    edad,
+                    contraseña,
+                    experiencia,
+                    foto
+                )
+                Listas.listaPersona.add(piloto)
+                Conexion.addPiloto(this, piloto)
+                Toast.makeText(this, "Piloto $nombre añadido con exito", Toast.LENGTH_SHORT).show()
+                var intentVader = Intent(this, VaderActivity::class.java)
+                startActivity(intentVader)
+
+
         }
 
     }

@@ -55,6 +55,15 @@ class PilotoActivity : AppCompatActivity() {
             intentMisionesNoAsig.putExtra("piloto",piloto)
             startActivity(intentMisionesNoAsig)
         }
+        binding.btMisionesSi.setOnClickListener{
+            var intentMisionesSiAsig = Intent(this,MisionesReaActivity::class.java)
+            intentMisionesSiAsig.putExtra("piloto",piloto)
+            startActivity(intentMisionesSiAsig)
+        }
+        binding.btCerrarPiloto.setOnClickListener{
+            var intentMain= Intent(this,MainActivity::class.java)
+            startActivity(intentMain)
+        }
 
 
     }

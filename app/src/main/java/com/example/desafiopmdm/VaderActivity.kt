@@ -29,5 +29,15 @@ class VaderActivity : AppCompatActivity() {
             var intentAsignarMision = Intent(this,AsignarMisionActivity::class.java)
             startActivity(intentAsignarMision)
         }
+
+        binding.btRankingPilotos.setOnClickListener{
+            var intentRanking = Intent(this,RankingActivity::class.java)
+            startActivity(intentRanking)
+        }
+
+        binding.btCerrar.setOnClickListener{
+            var intentMain= Intent(this,MainActivity::class.java)
+            startActivity(intentMain)
+        }
     }
 }
