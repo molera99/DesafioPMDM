@@ -153,6 +153,44 @@ object Conexion {
         bd.close()
 
     }
+
+    fun obtenerMisionesSinRealizar(contexto: AppCompatActivity,nombre: String):ArrayList<Mision>{
+        val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
+        val bd = admin.writableDatabase
+        var misiones=ArrayList<Mision>()
+        var fila = bd.rawQuery("select idMision,tipo,nombre,matricula,resultado,duracion,numCazas,bombarderos from mision where tipo=\"Vuelo\" and nombre=\"$nombre\" and resultado=\"No realizada\"", null)
+        if(fila.count>0) {
+            while (fila.moveToNext()) {
+                var v: Vuelo = Vuelo(fila.getInt(0), fila.getString(1), fila.getString(2), fila.getString(3), fila.getString(4), fila.getInt(5))
+                misiones.add(v)
+            }
+        }
+        fila = bd.rawQuery("select idMision,tipo,nombre,matricula,resultado,duracion,numCazas,bombarderos from mision where tipo=\"Bombardeo\" and nombre=\"$nombre\" and resultado=\"No realizada\"", null)
+        if(fila.count>0) {
+            while (fila.moveToNext()) {
+                var b: Bombardeo = Bombardeo(fila.getInt(0), fila.getString(1), fila.getString(2), fila.getString(3), fila.getString(4), fila.getInt(7))
+                misiones.add(b)
+            }
+        }
+        fila = bd.rawQuery("select idMision,tipo,nombre,matricula,resultado,duracion,numCazas,bombarderos from mision where tipo=\"Combate\" and nombre=\"$nombre\" and resultado=\"No realizada\"", null)
+        if(fila.count>0) {
+            while (fila.moveToNext()) {
+                var c: Combate = Combate(fila.getInt(0), fila.getString(1), fila.getString(2), fila.getString(3), fila.getString(4), fila.getInt(6))
+                misiones.add(c)
+            }
+        }
+        bd.close()
+        return misiones
+    }
+    fun updateExperiencia(contexto:AppCompatActivity,piloto: Piloto){
+        val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
+        val bd = admin.writableDatabase
+        val registro = ContentValues()
+        registro.put("experiencia", piloto.experiencia)
+        bd.update("persona", registro, "nombre='${piloto.nombre}'", null)
+        bd.close()
+    }
+
     fun UpdateMision(contexto:AppCompatActivity, m:Mision,nombre: String,matricula: String,resultado:String){
         val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
         val bd = admin.writableDatabase
@@ -163,6 +201,16 @@ object Conexion {
         bd.update("mision", registro, "idMision='${m.idMision}'", null)
         bd.close()
     }
+
+    fun updateResultado(contexto:AppCompatActivity,resultado: String,m:Mision){
+        val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
+        val bd = admin.writableDatabase
+        val registro = ContentValues()
+        registro.put("resultado", resultado)
+        bd.update("mision", registro, "idMision='${m.idMision}'", null)
+        bd.close()
+    }
+
     fun updateFoto(contexto:AppCompatActivity,foto:String,nombre:String){
         val admin = AdminSQLIteConexion(contexto, nombreBD, null, 1)
         val bd = admin.writableDatabase

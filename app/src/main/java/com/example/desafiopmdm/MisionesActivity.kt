@@ -48,7 +48,7 @@ class MisionesActivity : AppCompatActivity() {
 
         binding.btAddMision.setOnClickListener{
             if (binding.rbVuelo.isChecked){
-                vuelo=FactoriaMisiones.crearVuelo(binding.etDurVuelo.text.toString().toInt())
+                vuelo=FactoriaMisiones.crearVuelo(binding.etDurVuelo.text.toString().toInt()*1000)
                 Listas.listaMision.add(vuelo)
                 Conexion.addVuelo(this,vuelo)
                 Toast.makeText(this, "Mision ${vuelo.tipo} añadida con exito", Toast.LENGTH_SHORT).show()

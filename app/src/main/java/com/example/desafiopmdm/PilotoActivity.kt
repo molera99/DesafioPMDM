@@ -50,6 +50,13 @@ class PilotoActivity : AppCompatActivity() {
             startActivityForResult(cameraIntent, cameraRequest)
         }
 
+        binding.btMisionesNo.setOnClickListener{
+            var intentMisionesNoAsig = Intent(this,MisionesSinActivity::class.java)
+            intentMisionesNoAsig.putExtra("piloto",piloto)
+            startActivity(intentMisionesNoAsig)
+        }
+
+
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
